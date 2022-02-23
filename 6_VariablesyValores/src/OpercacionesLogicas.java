@@ -36,8 +36,12 @@ public class OpercacionesLogicas {
         
        // operation = (primerNumero < segundoNumero); true
         //operation = !(primerNumero < segundoNumero); false   lo invierte
-        operation = (primerNumero != segundoNumero); 
+        //operation = (primerNumero != segundoNumero); true 
         operacion = (primerNumero + segundoNumero) == tercerNumero;
+        
+        //operation = primerNumero > segundoNumero  && primerNumero < tercerNumero; false
+        
+        operation = primerNumero > segundoNumero  || primerNumero < tercerNumero; //True, porque una si lo es 
         System.out.println(operation);
     }
 }
