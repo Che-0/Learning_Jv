@@ -16,6 +16,28 @@ public class Main {
     public static void main(String[] args)
     {
         CuentaBancaria rfc = new CuentaBancaria();
+        
+        //de esta manera nos aseguramos que nadie va a pocer modificar los valores de las var 
+       /* rfc.saldo = -123;
+        rfc.alias = "#$%$#/%"; <---- como esta en privado solo lo podemos modificar con un metodo
+        rfc.RFC = "simon";
+        */
+       rfc.mostrarDatos();
+       rfc.setAlias("manuel");
+       rfc.setAlias(null);
+       rfc.mostrarDatos();
+       
+        
+        String a = rfc.getAlias();
+        System.out.println(a);
+        
+        
+        
+        
+        
+        
+        /*
+  
         //System.out.println(rfc.RFC + " " + rfc.alias + " " + rfc.saldo);   ---- ya no se necesita
         rfc.mostrarDatos();       //este metodo sustituye el desmadre de arriba 
         rfc.RFC = "MSRN92810";
@@ -39,7 +61,7 @@ public class Main {
         
         rfc.extraer(10500);
         System.out.println(rfc.obtenerSaldo());
-        
+        */
     }
     
 }
